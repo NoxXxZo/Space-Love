@@ -12,7 +12,7 @@ const ctx = canvas.getContext("2d");
 const electronCount = 3;
 const electrons = [];
 //mensajes cometa
-const cometMessages = ["I LOVE YOU", "HONEY", "YOU ARE SPECIAL", "MY LOVE"];
+const cometMessages = ["TE AMO", "ERES LA MEJOR", "SIEMPRE JUNTOS", "MI VIDA"];
 const cometTexts = [];
 const cometSpawnInterval = 5000; // Cada 5 segundos aparecerá uno
 let lastCometSpawnTime = 0;
@@ -43,7 +43,7 @@ function drawGalaxy() {
   ctx.fillStyle = "#ffffff";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText("🌷TOUCH ❤️", centerX, centerY);
+  ctx.fillText("🌷Tócame ❤️", centerX, centerY);
   angle += 0.5;
   animationId = requestAnimationFrame(drawGalaxy);
 }
@@ -239,7 +239,7 @@ function start3DScene() {
     });
   }
 
-  const totalRings = 6; //numero de capas o anillos
+  const totalRings = 5; //numero de capas o anillos
   const photosPerRing = 10; // fotos por anillo
   const orbitBaseRadius = 22; // radio base para el primer anillo
   const photoGroups = [];
@@ -254,7 +254,7 @@ function start3DScene() {
 
     for (let i = 0; i < photosPerRing; i++) {
       const textureIndex = Math.floor(Math.random() * totalPhotos) + 1;
-      const texture = loader.load(`assets/images/foto${textureIndex}.webp`);
+      const texture = loader.load(`assets/images/foto${textureIndex}.jpeg`);
 
       const geometry = new THREE.PlaneGeometry(5, 3.5);
       const material = new THREE.MeshBasicMaterial({
@@ -301,7 +301,7 @@ function start3DScene() {
     "./assets/fonts/helvetiker_bold.typeface.json",
     function (font) {
       loadedFont = font; // Guardar la fuente cargada globalmente
-      const textGeometry = new TextGeometry("SPACE LOVE", {
+      const textGeometry = new TextGeometry("TE AMO", {
         font: font,
         size: 4,
         height: 0.5,
