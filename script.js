@@ -301,7 +301,7 @@ function start3DScene() {
     "./assets/fonts/helvetiker_bold.typeface.json",
     function (font) {
       loadedFont = font; // Guardar la fuente cargada globalmente
-      const textGeometry = new TextGeometry("TE AMO", {
+      const textGeometry = new TextGeometry("Space Love", {
         font: font,
         size: 4,
         height: 0.5,
